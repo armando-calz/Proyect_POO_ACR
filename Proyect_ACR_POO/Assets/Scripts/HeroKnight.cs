@@ -125,7 +125,7 @@ public class HeroKnight : MonoBehaviour
             m_currentAttack++;
 
             // controla el indice del ataque para saber que animacion hacer
-            if (m_currentAttack > 3)
+            if (m_currentAttack > 2)
                 m_currentAttack = 1;
 
             // resetea la secuencia de ataques si el tiempo entre los ataques fue mucho
