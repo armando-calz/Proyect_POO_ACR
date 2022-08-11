@@ -40,6 +40,11 @@ public class melee : MonoBehaviour
             Debug.Log("le pegaste a un esqueleto");
             Destroy(impacto.gameObject);
         }
+        else if (impacto.tag == "goblin")
+        {
+            Debug.Log("le pegaste a un goblin");
+            Destroy(impacto.gameObject);
+        }
     }
    
 

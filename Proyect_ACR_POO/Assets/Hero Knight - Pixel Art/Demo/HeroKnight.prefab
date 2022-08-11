@@ -136,13 +136,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 979084183}
+  - component: {fileID: 979084184}
   m_Layer: 0
   m_Name: espada
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &979084183
 Transform:
   m_ObjectHideFlags: 0
@@ -157,6 +158,25 @@ Transform:
   m_Father: {fileID: 8413529789942519730}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &979084184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979084182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d741c053fed931441a12d1c23203515d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaCubo: 100
+  origin: {fileID: 979084183}
+  sizeCol: 0.99
+  colorCol: {r: 0.8113208, g: 0.04133137, b: 0.04133137, a: 1}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &111755813442870902
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +253,7 @@ GameObject:
   - component: {fileID: 9117128348835321587}
   - component: {fileID: 2024179351}
   - component: {fileID: 2024179358}
+  - component: {fileID: 2128407510}
   m_Layer: 0
   m_Name: HeroKnight
   m_TagString: Player
@@ -274,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 7
-  m_jumpForce: 7.5
+  m_jumpForce: 10
   m_rollForce: 6
   m_noBlood: 1
   m_slideDust: {fileID: 1038168246061390451, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
@@ -378,7 +399,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 10
   m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -449,6 +470,7 @@ MonoBehaviour:
   m_rollDuration: 0.5714286
   m_rollCurrentTime: 0
   vida: 100
+  vidaText: {fileID: 0}
 --- !u!114 &2024179358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e892cbd2fe66d624faf890d74c03b68d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 4
+  m_speed: 7
   m_jumpForce: 15
   m_rollForce: 6
   m_noBlood: 0
@@ -485,6 +507,26 @@ MonoBehaviour:
   m_rollDuration: 0.5714286
   m_rollCurrentTime: 0
   vida: 100
+  vidaText: {fileID: 0}
+--- !u!114 &2128407510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323719953710832613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6b5a23659ab3347adcdd13567c1f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemigos:
+  - {fileID: 3497212637848388321, guid: 206ec4781fc45934fb6ac47e2f3be3e2, type: 3}
+  - {fileID: 7904559064945375163, guid: 49a60d39567116d469b25160eaf6501f, type: 3}
+  spawnpoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7087049454815086010
 GameObject:
   m_ObjectHideFlags: 0

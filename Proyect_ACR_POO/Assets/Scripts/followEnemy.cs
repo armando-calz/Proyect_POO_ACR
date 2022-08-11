@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class followEnemy : MonoBehaviour
 {
-    public Transform target;
+    public Transform target ;
 
     public float minDistance;
 

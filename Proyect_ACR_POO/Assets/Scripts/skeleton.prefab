@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3497212637848388325}
   - component: {fileID: 3497212637848388324}
   - component: {fileID: 4828643452962042323}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: skeleton
   m_TagString: skeleton
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3497212637848388321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.5317, y: -23.6864, z: 0}
-  m_LocalScale: {x: 7.408289, y: 7.944627, z: 1}
+  m_LocalScale: {x: 8.315696, y: 8.924367, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  minDistance: 10
+  minDistance: 15
   maxDistance: 4
   speed: 0
   m_facingDirection: 1
@@ -167,5 +167,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62, y: 0.5634555}
+  m_Size: {x: 0.623, y: 0.5634555}
   m_EdgeRadius: 0
