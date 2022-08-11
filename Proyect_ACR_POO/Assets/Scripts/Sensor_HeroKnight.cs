@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/*
+    Armando Calzada R.
+    Programacion Orientada a Objetos 
+    Josue Israel Rivas Díaz
+    Este script se asigna a cada sensor para que por medio de su estado retorne valores y se puedan utilizar para la lógica en el script heroKnight
+ */
 public class Sensor_HeroKnight : MonoBehaviour {
 
     private int m_ColCount = 0;

@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
+    Armando Calzada R.
+    Programacion Orientada a Objetos 
+    Josue Israel Rivas Díaz
+    Este script se encarga de detectar las colisiones y realizar las acciones correspondientes
+ */
 public class colisionador : lifeController
 {
     public int bandera = 0;
     public Text winText;
+
+    //cuando se detecte la colision va a invocar y comparar las etiquetas, pueden afectar la vida, el componente transform, el sprite renderer
     void OnCollisionEnter2D(Collision2D other)
     {
         AsignarEtiqueta("skeleton", other, 10);
@@ -29,10 +36,14 @@ public class colisionador : lifeController
             if (vida <= 0)
             {
                 m_animator.SetTrigger("Death");
-                this.gameObject.SetActive(false);
+                GetComponent<Transform>().position = new Vector3(0, 0, 0);
+                this.transform.gameObject.SetActive(false);
+                winText.text = "Perdiste";
             }
         }
     }
+
+    //funcion cunado colisiona con la pocion morada que afecta el componente transform y la vida
     void handicap(string etiqueta, Collision2D other, int daño)
     {
         if (other.gameObject.tag == etiqueta)
@@ -45,7 +56,7 @@ public class colisionador : lifeController
             if (vida <= 0)
             {
                 m_animator.SetTrigger("Death");
-                this.gameObject.SetActive(false);
+                this.transform.gameObject.SetActive(false);
             }
             if (bandera== 0)
             {
@@ -59,6 +70,7 @@ public class colisionador : lifeController
             Destroy(other.gameObject);
         }
     }
+    //funcion  cuando colisiona con la pocion vacia que afecta el componente transform y lo regresa al mapa 
     void regreso(string etiqueta, Collision2D other) 
     {
             if (other.gameObject.tag == etiqueta)
@@ -66,6 +78,7 @@ public class colisionador : lifeController
             GetComponent<Transform>().position = new Vector3(57, -20, 0);
             }
      }
+    //funcion cuando colisiona con  las pildoras que le suman cierta vida
     void pills(string etiqueta, Collision2D other, int sumaVida) 
     {
         if (other.gameObject.tag == etiqueta) 
@@ -76,6 +89,7 @@ public class colisionador : lifeController
             Destroy(other.gameObject);
         }
     }
+    //funcion para cuando colisiona con el trebol afecta la posicion 
     void win (string etiqueta, Collision2D other)
     {
         if (other.gameObject.tag == etiqueta)
@@ -85,6 +99,7 @@ public class colisionador : lifeController
         }
     }
 
+    //solo rescribe los valores de interfaz de usuario
     public void start()
     {
         winText.text = "";

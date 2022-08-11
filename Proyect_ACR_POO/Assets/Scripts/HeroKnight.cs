@@ -1,6 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+    Armando Calzada R.
+    Programacion Orientada a Objetos 
+    Josue Israel Rivas Díaz
+    Este programa funciona como el controlador del personaje se encarga de los movimientos y mecanicas relacionadas con el personaje principal, además, relaciona las animaciones.
+    Basicamente este script es encargado de controlar al personaje y se ayuda de los sensores 
+ */
+
 public class HeroKnight : MonoBehaviour
 {
 

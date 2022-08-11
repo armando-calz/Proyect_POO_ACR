@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DestroyEvent_HeroKnight : MonoBehaviour
 {
-    // Destroy particles when animation has finished playing. 
-    // destroyEvent() is called as an event in animations.
+    //cuando la animacion de slide acabe, va a mandar destruir las particulas "dust"
     public void destroyEvent()
     {
         Destroy(gameObject);

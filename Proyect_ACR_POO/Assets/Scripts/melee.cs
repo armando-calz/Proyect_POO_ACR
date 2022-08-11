@@ -4,11 +4,16 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 
+/*
+    Armando Calzada R.
+    Programacion Orientada a Objetos 
+    Josue Israel Rivas Díaz
+    se encarga del ataque a los enemigos, se asigna a los empty que simulan la espada y se encarga de hacer daño o destruir un objeto
+ */
 public class melee : MonoBehaviour
 {
 
     public int vidaCubo = 100;
-    //public TextMeshProUGUI vidaText;
     public Transform origin;
     public float sizeCol;
 
@@ -19,6 +24,7 @@ public class melee : MonoBehaviour
 
     private void Awake()
     {
+        // se desactiva el empty al iniciar
         origin.gameObject.SetActive(false);
         //   vidaText.text= "Vida Actual: " + vidaCubo;
     }
@@ -34,6 +40,7 @@ public class melee : MonoBehaviour
 
     void Checker2D()
     {
+        //este segmento de codigo compara con que objeto colisionó la espada, esto puede utilizarse para realizar diferentes acciones o sonidos dependiendo los materiales
         Collider2D impacto = Physics2D.OverlapCircle(origin.position, sizeCol, enemyLayer);
         if (impacto.tag == "skeleton")
         {
@@ -50,6 +57,7 @@ public class melee : MonoBehaviour
 
     void OnDrawGizmos()
     {
+        //dibuja un gizmo
         DibujarEsfera(origin, sizeCol, colorCol);
 
     }
